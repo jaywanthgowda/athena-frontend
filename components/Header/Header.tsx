@@ -208,7 +208,7 @@ import {
               <a href="#" className={classes.link}>
                 Features
               </a>
-              <a href="#" className={classes.link}>
+              <a href="#about-us" className={classes.link}>
                 About
               </a>
               <a href="#" className={classes.link}>
@@ -250,7 +250,7 @@ import {
               </Center>
             </UnstyledButton>
             <Collapse in={linksOpened}>{links}</Collapse>
-            <a href="#" className={classes.link}>
+            <a href="/about-us" className={classes.link}>
               About Us
             </a>
   
