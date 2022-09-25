@@ -28,8 +28,9 @@ import {
     IconCoin,
     IconChevronDown,
   } from '@tabler/icons';
+import Link from "next/link";
 
-  import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
+import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
   
   const useStyles = createStyles((theme) => ({
     link: {
@@ -148,76 +149,42 @@ import {
     ));
   
     return (
-      <Box pb={120}>
+      <Box pb={10}>
         <Header height={60} px="md">
           <Group position="apart" sx={{ height: '100%' }}>
             {/* <MantineLogo size={30} /> */}
             <Title order={3}>Athena</Title>
   
             <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
-              <a href="#" className={classes.link}>
-                Home
-              </a>
+              <Link href="#home">
+                <Anchor className={classes.link}>
+                  Home
+                </Anchor>
+              </Link>
               
-              {/* <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
-                <HoverCard.Target>
-                  <a href="#" className={classes.link}>
-                    <Center inline>
-                      <Box component="span" mr={5}>
-                        Features
-                      </Box>
-                      <IconChevronDown size={16} color={theme.fn.primaryColor()} />
-                    </Center>
-                  </a>
-                </HoverCard.Target>
-  
-                <HoverCard.Dropdown sx={{ overflow: 'hidden' }}>
-                  <Group position="apart" px="md">
-                    <Text weight={500}>Features</Text>
-                    <Anchor href="#" size="xs">
-                      View all
-                    </Anchor>
-                  </Group>
-  
-                  <Divider
-                    my="sm"
-                    mx="-md"
-                    color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'}
-                  />
-  
-                  <SimpleGrid cols={2} spacing={0}>
-                    {links}
-                  </SimpleGrid>
-  
-                  <div className={classes.dropdownFooter}>
-                    <Group position="apart">
-                      <div>
-                        <Text weight={500} size="sm">
-                          Get started
-                        </Text>
-                        <Text size="xs" color="dimmed">
-                          Their food sources have decreased, and their numbers
-                        </Text>
-                      </div>
-                      <Button variant="default">Get started</Button>
-                    </Group>
-                  </div>
-                </HoverCard.Dropdown>
-              </HoverCard> */}
+              <Link href="#features">
+                <Anchor className={classes.link}>
+                  Features
+                </Anchor>
+              </Link>
               
-              <a href="#" className={classes.link}>
-                Features
-              </a>
-              <a href="#about-us" className={classes.link}>
-                About
-              </a>
-              <a href="#" className={classes.link}>
-                Support
-              </a>
+              <Link href="#about">
+                <Anchor className={classes.link}>
+                  About
+                </Anchor>
+              </Link>
+
+              <Link href="#support">
+                <Anchor className={classes.link}>
+                  Support
+                </Anchor>
+              </Link>
             </Group>
   
             <Group className={classes.hiddenMobile}>
-              <Button variant="default">Log in</Button>
+              <Link href="/login">
+                <Button variant="default">Log in</Button>
+              </Link>
               <Button>Sign up</Button>
               <ColorSchemeToggle />
             </Group>
@@ -237,11 +204,17 @@ import {
         >
           <ScrollArea sx={{ height: 'calc(100vh - 60px)' }} mx="-md">
             <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
-  
-            <a href="#" className={classes.link}>
-              Home
-            </a>
-            <UnstyledButton className={classes.link} onClick={toggleLinks}>
+            <Link href="#home">
+              <a className={classes.link}>
+                Home
+              </a>
+            </Link>
+            <Link href="#features">
+              <a className={classes.link}>
+                Features
+              </a>
+            </Link>
+            {/* <UnstyledButton className={classes.link} onClick={toggleLinks}>
               <Center inline>
                 <Box component="span" mr={5}>
                   Features
@@ -249,10 +222,18 @@ import {
                 <IconChevronDown size={16} color={theme.fn.primaryColor()} />
               </Center>
             </UnstyledButton>
-            <Collapse in={linksOpened}>{links}</Collapse>
-            <a href="/about-us" className={classes.link}>
-              About Us
-            </a>
+            <Collapse in={linksOpened}>{links}</Collapse> */}
+            <Link href="#about">
+              <a className={classes.link}>
+                About Us
+              </a>
+            </Link>
+
+            <Link href="#support">
+              <a className={classes.link}>
+                Support
+              </a>
+            </Link>
   
             <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
   

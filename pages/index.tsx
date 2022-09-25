@@ -1,14 +1,26 @@
-// import { Welcome } from '../components/Welcome/Welcome';
-// import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
-import Link from 'next/link';
+import Home from '../components/Home/Home';
+import {About} from '../components/About/About';
 
-import { HeaderMegaMenu } from '../components/Header/Header';
-import { AuthenticationTitle } from '../components/Login/Login';
+import { HeaderMegaMenu as Header } from '../components/Header/Header';
+import { FooterSocial as Footer } from '../components/Footer/Footer';
+import { Divider } from '@mantine/core';
+import {Features} from '../components/Features/Features';
+import Support from '../components/Support/Support';
+import { HeroText } from '../components/Hero/Hero';
 
 export default function HomePage() {
   return (
     <>
-      <HeaderMegaMenu />
+      <Header />
+      <HeroText />
+      <Home/>
+      <Divider></Divider>
+      <Features/>
+      <Divider></Divider>
+      <About/>
+      <Divider></Divider>
+      <Support/>
+      <Footer/>
     </>
   );
 }
